@@ -1,0 +1,1 @@
+cmd_/home/sunset/바탕화면/kmodtut/kmodtut.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/sunset/바탕화면/kmodtut/kmodtut.ko /home/sunset/바탕화면/kmodtut/kmodtut.o /home/sunset/바탕화면/kmodtut/kmodtut.mod.o ;  true

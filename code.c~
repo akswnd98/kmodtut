@@ -1,0 +1,20 @@
+#include <unistd.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <stdio.h>
+
+int main() {
+  int fd = open("/sys/class/kmodtut/kmodtut/kmodtut", O_RDWR);
+  if(fd < 0) {
+	perror("error: ");
+	return 0;
+  }
+  char buf[1005] = "kmj make";
+  read(fd, buf, 100);
+  printf(buf);
+  write(fd, buf, 100);
+  printf(buf);
+  close(fd);
+
+  return 0;
+}
